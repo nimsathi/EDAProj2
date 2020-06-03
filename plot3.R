@@ -9,6 +9,7 @@ summaryData <- NEI %>%
   group_by(year, type) %>%
   summarise(totalEmissions = sum(Emissions));
 
+png('plot3.png', width=480, height=480)
 g <- ggplot(data=summaryData, aes(x=year, y=totalEmissions, color=type)) +
   geom_point() +
   geom_smooth(method="lm") + 
@@ -16,4 +17,5 @@ g <- ggplot(data=summaryData, aes(x=year, y=totalEmissions, color=type)) +
   labs(title="Baltimore - total PM2.5 emissions by type", x="Year", y="PM2.5 Emissions (T)")
 
 print(g)
+dev.off()
   
