@@ -15,4 +15,5 @@ g <- ggplot(data=summaryData, aes(x=year, y=totalEmissions, color=type)) +
   facet_wrap(~ type) +
   labs(title="Baltimore - total PM2.5 emissions by type", x="Year", y="PM2.5 Emissions (T)")
 
+print(g)
   
