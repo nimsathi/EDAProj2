@@ -19,7 +19,7 @@ coalEmissions$year <- as.factor(coalEmissions$year)
 
 png('plot4.png', width=480, height=480)
 g <- ggplot(data=coalEmissions, aes(x=year, y=totalEmissions)) +
-  geom_bar(stat="identity") +
+  geom_bar(stat="identity", fill="blue") +
   labs(title="PM25 Emissions from coal sources", x="Year", y="PM2.5 Emissions (kiloton)")
 print(g)
 dev.off()
