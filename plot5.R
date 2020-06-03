@@ -20,8 +20,8 @@ vehicleEmissions$year <- as.factor(vehicleEmissions$year)
 
 png('plot5.png', width=480, height=480)
 g <- ggplot(data=vehicleEmissions, aes(x=year, y=totalEmissions)) +
-  geom_bar(stat="identity") +
+  geom_bar(stat="identity", fill="#008000") +
   labs(x="Year", y="PM2.5 Emissions (T)") +
-  ggtitle("Total PM2.5 Emissions in Baltimore City", subtitle = "By Motor Vehicles")
+  ggtitle("Total PM2.5 Emissions in Baltimore City by Motor Vehicles")
 print(g)
 dev.off()
